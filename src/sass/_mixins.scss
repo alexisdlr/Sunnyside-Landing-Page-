@@ -1,0 +1,41 @@
+
+@mixin flex ($dir,$jus, $items) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $jus;
+  align-items: $items;
+}
+@mixin title ($color, $size, $weight){
+  font-family: $font-fraunces;
+  color: $color;
+  font-size: $size;
+  font-weight: $weight;
+}
+@mixin pseudoelement ($color) {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 110%;
+  height: 5px;
+  background-color: $color;
+  border-radius: 50px;
+  z-index: 1111;
+  opacity: .4;
+}
+@mixin link {
+  color: $very-dark-desaturated-blue;
+  font-family: $font-fraunces;
+  font-weight: 900;
+  cursor: pointer;
+  transition: $transition;
+  &:hover {
+    opacity: .7;
+  }
+}
+@mixin sectionImage {
+  width: 50%;
+  height: 600px;
+  text-align: center;
+  @include flex(column, end, center);
+  padding-bottom: 3rem; 
+}

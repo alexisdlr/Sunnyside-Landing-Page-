@@ -1,0 +1,88 @@
+header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  padding: 1rem 3rem;
+
+}
+.navigation {
+  max-height: 65px;
+  @include flex(row, space-between,center);
+  background: transparent;
+
+  &__ul {
+    @include flex(row, center, center);
+    gap: 1rem;
+    color: $White;
+    transition: $transition;
+    &-li {
+      transition: all 300ms ease-in-out;
+      cursor: pointer;
+
+    } 
+    &-li:nth-child(4) {
+      padding: 1rem 1.5rem;
+      background-color: $White;
+      color: $dark-blue;
+      font-family: $font-fraunces;
+      border-radius: 50px; 
+      font-weight: 900;
+      &:hover {
+        background-color: transparent;
+        color: $White;
+      }
+    }
+  
+  }
+
+  .active {
+    width: 80%;
+    transition: $transition;
+    padding: 2rem 1rem;
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    background-color: $White;
+    color: $dark-blue;
+    @include flex(column, center, center);
+    border-radius: 5px;
+    z-index: 999;
+
+  }
+  .burguer {
+    background-color: transparent;
+    border: none;
+    z-index: 99999;
+    cursor: pointer;
+  }
+
+
+}
+@media (min-width: 280px) and (max-width: 768px) {
+  .navigation {
+    &__ul {
+      position: absolute;
+      right: -1000px;
+      top: 3rem;
+      flex-direction: column;
+
+      &-li:nth-child(4) {
+        padding: 1rem 1.5rem;
+        background-color: $yellow;
+        color: $dark-blue;
+        font-family: $font-fraunces;
+        border-radius: 50px; 
+        font-weight: 900;
+        &:hover {
+          background-color: transparent;
+          color: $White;
+        }
+      }
+    }
+  }
+}
+@media (min-width:768px) {
+  .burguer {
+    display: none;
+  }
+}

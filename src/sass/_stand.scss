@@ -1,0 +1,57 @@
+.section-stand {
+  @include flex(row-reverse, center,center);
+  max-height: 800px;
+  
+  &__text {
+    width: 100%;
+    text-align: left;
+    @include flex(column,center,center);
+    .container-text {
+      width: 50%;
+    }
+
+    &-title {
+      @include title($very-dark-desaturated-blue, 2.5rem, 900);
+    }
+    &-parag {
+      line-height: 1.5rem;
+      color:$very-dark-grayish-blue;
+    }
+    &-link {
+      position: relative;
+      @include link;
+      &::before {
+        content: '';
+        @include pseudoelement($soft-red);
+      }
+    }
+  }
+  &__img {
+    width: 100%;
+    height: 650px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+@media (min-width: 280px) and (max-width: 820px) {
+  .section-stand {
+    flex-direction: column-reverse;
+    &__text {
+      width: 100%;
+      padding: 8rem .3rem;
+      text-align: center;
+      &-title {
+        font-size: 2rem;
+      }
+      &-parag {
+        font-size: 14px;
+      }
+    }
+    &__img {
+      width: 100%;
+      height: 400px;
+    }
+  }
+}

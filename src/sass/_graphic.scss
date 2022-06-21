@@ -1,0 +1,43 @@
+.section-images {
+  @include flex(row,space-between,center);
+  max-height: 800px;
+  .section-orange {
+    background: url('../images/desktop/image-graphic-design.jpg') no-repeat center/cover;
+    @include sectionImage;
+    color: $dark-desaturated-cyan;
+    
+  }
+  .section-photo {
+    background: url('../images/desktop/image-photography.jpg') no-repeat center/cover;
+    @include sectionImage;
+    color: $dark-blue;
+    
+  }
+  .container__text {
+    width: 50%;
+    &-title {
+      @include title(inherit, 2rem, 900);
+    }
+   }
+  
+}
+
+@media (min-width: 280px) and (max-width: 820px) {
+  .section-images {
+    flex-direction: column;
+    .section-orange {
+      width:100% ;
+      
+    }
+    .section-photo {
+      width:100% ;
+    }
+    .container__text {
+      width: 50%;
+      &-title {
+        @include title(inherit, 2rem, 900);
+      }
+     }
+
+  }
+}

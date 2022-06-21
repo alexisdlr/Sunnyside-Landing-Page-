@@ -1,0 +1,37 @@
+@import 'variables';
+@import 'mixins';
+@import 'main-banner';
+@import 'nav';
+@import 'transform';
+@import 'stand';
+@import 'graphic';
+
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-barlow;
+  font-weight: 600;
+  font-size: 15px;
+  position: relative;
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar{
+    width: 12px;
+    background-color:$White;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 50px;
+    background-color:$yellow;
+  }
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
