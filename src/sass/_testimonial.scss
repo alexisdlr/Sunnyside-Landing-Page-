@@ -1,7 +1,9 @@
 .section__testimonial {
   @include flex(column, center,center);
   padding: 6rem 1rem;
-
+  @media (max-width: 800px) {
+    padding: 0;
+  }
   &-containertitle{
     margin-bottom: 3rem;
 

@@ -49,10 +49,12 @@ const Footer = () => {
         <div>
           <ul>
               {icons.map(icon => (
-                <Icon 
-                key={icon.id}
-                img={icon.img} />
+                <li key={icon.id}>
+                    <Icon 
+                    img={icon.img} />
+                </li>
               ) )}
+
             </ul>
         </div>
       </div>
