@@ -1,0 +1,52 @@
+.section__testimonial {
+  @include flex(column, center,center);
+  padding: 6rem 1rem;
+
+  &-containertitle{
+    margin-bottom: 3rem;
+
+    .title {
+      @include title($grayish-blue, 1rem, 900);
+      text-transform: uppercase;
+      letter-spacing: .5rem;
+
+    }
+  }
+
+  &-clients {
+    @include flex(row, center, center);
+    gap: 5rem;
+    @media 
+    (max-width: 800px) {
+      flex-direction: column;
+    }
+  }
+  .testimonial__container {
+    width: 350px;
+    @include flex(column, center, center );
+    text-align: center;
+    gap: 1rem;
+    &-text {
+
+      &-parag {
+        color: $very-dark-grayish-blue;
+        line-height: 1.5;
+        padding: 0 2rem;
+      }
+      &-title {
+        @include title($very-dark-desaturated-blue, 1rem, 900)
+      }
+      span {
+        color: $grayish-blue;
+      }
+    }
+    &-img {
+      width: 80px;
+      img {
+        width: 100%;
+        border-radius: 50px;
+      }
+    }
+  }
+}
+

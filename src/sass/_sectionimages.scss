@@ -1,0 +1,35 @@
+.section__images {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+
+    &-milkbottles {
+      width: 100%;
+      height: 400px;
+      background: url('../images/desktop/image-gallery-milkbottles.jpg') no-repeat center/cover;
+    }
+    &-orange {
+      width: 100%;
+      height: 400px;
+      background: url('../images/desktop/image-gallery-orange.jpg') no-repeat center/cover;
+    }
+    &-cone {
+      width: 100%;
+      height: 400px;
+      background: url('../images/desktop/image-gallery-cone.jpg') no-repeat center/cover;
+    }
+    &-sugarcubes {
+      width: 100%;
+      height: 400px;
+      background: url('../images/desktop/image-gallery-sugarcubes.jpg') no-repeat center/cover;
+    }
+}
+@media (min-width: 280px) and (max-width: 820px) {
+  .section__images {
+    @include flex(column, center,center);
+    height:auto;
+
+  }
+}

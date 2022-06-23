@@ -1,22 +1,23 @@
-import Parag from "./common/Parag"
-import Title from "./common/Title"
-
-const SectionImages = ({className, title, parag}) => {
+const SectionImages = () => {
+  
   return(
-    <article className={className}>
-      <div className="container__text">
-        <Title
-         className='container__text-title'
-         title={title}
-
-        />
-        <Parag 
-          className='container__text-parag'
-          content={parag}
-          
-        />
+    <section className="section__images">
+      <div className='section__images-milkbottles'>
+        
       </div>
-    </article> 
+      <div className='section__images-orange'>
+        
+      </div>
+      <div className='section__images-cone'>
+        
+      </div>
+      <div className='section__images-sugarcubes'>
+        
+      </div>
+          
+        
+
+    </section>
   )
 }
-export default SectionImages
+export default SectionImages 

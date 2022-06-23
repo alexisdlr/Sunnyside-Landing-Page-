@@ -1,0 +1,18 @@
+footer {
+  @include flex(row,center,center);
+  padding: 3rem 0;
+  background-color: $dark-moderate-cyan;
+  color: $dark-desaturated-cyan;
+  .container-all {
+    @include flex(column, center, center);
+    gap: 1rem;
+    .container-logo {
+      @include flex(row, center,center);
+    }
+    ul {
+      @include flex(row, center,center);
+      gap: 1rem;
+      padding: 0;
+    }
+  }
+}

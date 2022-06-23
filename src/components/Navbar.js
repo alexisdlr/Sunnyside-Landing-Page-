@@ -29,6 +29,7 @@ const Navbar = () => {
               className='link'
               />
             </li>
+          
           ))}
         </ul>
         <button 

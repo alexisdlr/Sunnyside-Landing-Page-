@@ -3,13 +3,17 @@ import Navbar from './components/Navbar';
 import Section from './components/Section';
 import transfrom from './images/desktop/image-transform.jpg'
 import stand from './images/desktop/image-stand-out.jpg'
+import ContainerImages from './components/Graphic';
 import SectionImages from './components/SectionImages';
+import ClientTestimonial from './components/ClientTestimonials';
+import Footer from './components/Footer'
 
 function App() {
   
   return (
     <div className="App">
         <Navbar />
+   
         <Main />
         <Section
           hasText={true}
@@ -39,18 +43,20 @@ function App() {
           classImgCont='section-stand__img'
         />
         <section className='section-images'>
-          <SectionImages
+          <ContainerImages
           className='section-orange'
           title='Graphic design'
           parag='Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.'
           /> 
-          <SectionImages
+          <ContainerImages
           className='section-photo'
           title='Photography'
           parag='Increase your credibility by getting the most stunning, high-quality photos that improve your business image.'
           />           
        </section> 
-      
+       <ClientTestimonial />
+       <SectionImages />
+      <Footer />
     </div>
   );
 }

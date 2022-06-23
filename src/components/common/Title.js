@@ -3,6 +3,8 @@ const Title = ({isHeading, title, className}) => {
     isHeading ? <h1 className={className} >
       {title}
       </h1>: <h2 className={className}>{title}</h2>
+
+      
    );
 }
 
